@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://www.springframework.org/schema/beans"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ftpsever="http://mina.apache.org/ftpserver/spring/v1"
+          xsi:schemaLocation="
+	        http://www.springframework.org/schema/beans
+	        http://www.springframework.org/schema/beans/spring-beans.xsd
+	         http://mina.apache.org/ftpserver/spring/v1
+            http://mina.apache.org/ftpserver/ftpserver-1.0.xsd">
+
+
+    <bean id="hdfsFileSystemFactory" class="org.apache.contrib.ftp.filesystem.hadoop.HdfsFileSystemFactory">
+        <property name="confFileStrList">
+            <list value-type="java.lang.String">
+                <value>core-site.xml</value>
+                <value>hdfs-site.xml</value>
+            </list>
+        </property>
+        <!--<property name="checkConfFileListFlag" value="true" />-->
+    </bean>
+
+    <ftpsever:server id="server"
+                     max-logins="500"
+                     anon-enabled="false"
+                     max-anon-logins="123"
+                     max-login-failures="124"
+                     login-failure-delay="125" >
+        <ftpsever:listeners>
+            <ftpsever:nio-listener name="default" port="2221">
+            </ftpsever:nio-listener>
+        </ftpsever:listeners>
+
+        <ftpsever:file-user-manager file="users.properties"/>
+
+        <ftpsever:filesystem>
+            <ref bean="hdfsFileSystemFactory"></ref>
+        </ftpsever:filesystem>
+
+    </ftpsever:server>
+</beans>

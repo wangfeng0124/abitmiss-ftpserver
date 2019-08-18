@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+    <id>RELEASE</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <!-- <includeBaseDirectory>false</includeBaseDirectory> -->
+    <baseDirectory>abitmiss-ftpserver</baseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <includes>
+                <include>**</include>
+                <!--<include>*.sh</include>-->
+            </includes>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <directory>sbin</directory>
+            <outputDirectory>sbin</outputDirectory>
+            <includes>
+                <!-- <include>**</include> -->
+                <include>*.sh</include>
+            </includes>
+            <fileMode>0644</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <directory>logs</directory>
+            <outputDirectory>logs</outputDirectory>
+        </fileSet>
+
+        <fileSet>
+            <directory>target</directory>
+            <outputDirectory>lib</outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+        <!--<fileSet>
+            <directory>target/dependencies</directory>
+            <outputDirectory>dependencies</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>-->
+
+        <fileSet>
+            <directory>src/main/resources</directory>
+            <outputDirectory>conf</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/dependency</outputDirectory>
+            <includes>
+                <include>org.apache.hadoop:hadoop-hdfs</include>
+                <include>org.apache.hadoop:hadoop-common</include>
+                <include>org.apache.hadoop:hadoop-auth</include>
+                <include>com.google.guava:guava</include>
+                <include>commons-collections:commons-collections</include>
+                <include>commons-configuration:commons-configuration</include>
+                <include>commons-lang:commons-lang</include>
+                <include>commons-cli:commons-cli</include>
+                <include>com.google.protobuf:protobuf-java</include>
+                <include>org.htrace:htrace-core</include>
+
+                <include>org.apache.mina:mina-core</include>
+                <include>org.apache.ftpserver:ftplet-api</include>
+                <include>org.apache.ftpserver:ftpserver-core</include>
+
+                <include>org.springframework:spring-context</include>
+                <include>org.springframework:spring-core</include>
+                <include>org.springframework:spring-beans</include>
+
+                <include>org.slf4j:slf4j-api</include>
+                <include>org.slf4j:slf4j-log4j12</include>
+                <include>log4j:log4j</include>
+                <include>commons-logging:commons-logging</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+</assembly>

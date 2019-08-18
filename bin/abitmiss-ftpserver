@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+FILE_NAME=$0
+cd "$(dirname $0)"
+BIN_DIR="$(pwd)"
+PRJ_DIR="$(dirname ${BIN_DIR})"
+
+if [ $# -ne 1 ];then
+    echo "parameter must have only one, such as:"
+    echo "start, status, stop, restart"
+    exit 1
+fi
+
+function checkAppAlive(){
+    sh ${PRJ_DIR}/sbin/status.sh
+    if [ $? -ne 0 ];then
+        echo "if you wanna run a new program, please stop it first."
+        exit 1
+    fi
+}
+
+case $1 in
+    start)
+        echo "start program..."
+        checkAppAlive
+        sh ${PRJ_DIR}/sbin/start.sh &
+    ;;
+    stop)
+        echo "stop program..."
+        sh ${PRJ_DIR}/sbin/stop.sh
+    ;;
+    restart)
+        echo "restart program..."
+        ${BIN_DIR}/${FILE_NAME} stop
+        ${BIN_DIR}/${FILE_NAME} start
+    ;;
+    status)
+        echo "program status..."
+        sh ${PRJ_DIR}/sbin/status.sh
+    ;;
+    *)
+        echo "only the follow parameter can be use:"
+        echo "start, status, stop, restart"
+    ;;
+esac
