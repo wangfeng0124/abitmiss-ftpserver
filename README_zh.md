@@ -1,7 +1,7 @@
 # abitmiss ftpserver
 
 
-[README](README_zh.md) | [英文文档](README.md)
+[README](README_zh.md) | [ENGLISH DOC](README.md)
 
 abitmiss ftpserver支持不同的文件系统，可以在hadoop文件系统，本机文件系统上启动ftp服务器。 其他文件系统将在未来版本中添加。它基于apache ftpserver（100％纯java，免费，开源FTP服务器）。
 
