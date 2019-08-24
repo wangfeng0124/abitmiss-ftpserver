@@ -1,7 +1,7 @@
 # abitmiss ftpserver
 
 
-[README](README.md) | [CHINESE DOC](README_zh.md)
+[README](README.md) | [中文文档](README_zh.md)
 
 
 abitmiss ftpserver support different file system, it can be used to start a ftp server on hadoop file system, native file system. other file systems will can be added in future version.it is based on apache ftpserver(100% pure java,free,open source FTP server).
