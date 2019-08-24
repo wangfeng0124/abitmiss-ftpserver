@@ -12,7 +12,7 @@ dependencyJarStr=$(getAllPartternFiles "${PRJ_DIR}/dependency/*.jar" ":")
 #hadoopFileList=$(loadSpecifyFilesInDir "${HADOOP_CONF_DIR}" "${HADOOP_FILE_LIST}" ":")
 
 # add project and hadoop config dir to classpath
-cusClassPath=${HADOOP_CONF_DIR}:${PRJ_DIR}/conf:${dependencyJarStr}
+cusClassPath=${CUS_FS_CONF_DIR}:${PRJ_DIR}/conf:${dependencyJarStr}
 
 # get project jar file path, it is better have one *.jar file in ${PRJ_DIR}/lib path
 prjJar=$(getFirstPartternFiles "${PRJ_DIR}/lib/*.jar")

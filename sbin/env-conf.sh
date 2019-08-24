@@ -10,9 +10,14 @@ APP_NAME="abitmiss-ftpserver"
 JAVA_HOME=${JAVA_HOME}
 
 ##################################################################
-#                           HADDOP CONFIG
+#                      NATIVE FILE SYSTEM FLAG
 ##################################################################
-HADOOP_CONF_DIR=/etc/hadoop/conf
+NATIVE_FS_FLAG="false"
+
+##################################################################
+#                     CUSTOM FILE SYSTEM CONFIG
+##################################################################
+CUS_FS_CONF_DIR=/etc/hadoop/conf        # hadoop file system
 
 ##################################################################
 #    Custom ftp server xml config file name(need in classpath)
