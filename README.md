@@ -70,7 +70,7 @@ you can get more detail at [apache ftpserver document](https://mina.apache.org/f
 ##### 3. thanks to my company, it gives me a environment to complete it.
 
 ## Concact
-if you have some question or improvement suggestion to me, you can contact me with this [email](wangfeng0124@gmail.com)
+if you have some question or improvement suggestion to me, you can contact me with this email(wangfeng0124@gmail.com)
 ## Donate
 if abitmiss-ftpserver helps you a lot, you can support me as follow:
 #### Alipay
