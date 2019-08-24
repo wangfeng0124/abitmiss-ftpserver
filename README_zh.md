@@ -70,7 +70,7 @@ hadoop文件系统  --> abitmiss-ftpserver/conf/cus-hdfs-ftpd.xml
 ##### 3. 感谢我的公司，它供给了我一个良好的环境去完成它
 
 ## 联系方式
-如果你有一些问题或者提高建议给我，你可以通过[email](wangfeng0124@gmail.com)的方式联系我
+如果你有一些问题或者提高建议给我，你可以通过email(wangfeng0124@gmail.com)的方式联系我
 ## 捐献
 如果abitmiss-ftpserver帮助了你，你可以通过如下的方式支持我。
 #### 阿里支付
