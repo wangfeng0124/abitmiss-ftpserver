@@ -1,2 +1,0 @@
-# abitmiss-ftpserver
-## hello
