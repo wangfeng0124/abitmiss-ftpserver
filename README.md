@@ -55,7 +55,7 @@ you can config ftpserver port in this config file
 ```
 format: ftpserver.user.${username}.${key}=${value}
 
-notice: password value is md5 encrypted by default
+notice: password value is md5 encrypted by default, default value is test123
 ```
 
 ## Advance
