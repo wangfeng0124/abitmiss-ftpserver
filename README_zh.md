@@ -54,7 +54,7 @@ hadoop文件系统  --> abitmiss-ftpserver/conf/cus-hdfs-ftpd.xml
 ```
 格式： ftpserver.user.${username}.${key}=${value}
 
-注意： 默认密码是md5加密
+注意： 默认密码是md5加密，默认值为test123
 ```
 
 ## 高级配置
