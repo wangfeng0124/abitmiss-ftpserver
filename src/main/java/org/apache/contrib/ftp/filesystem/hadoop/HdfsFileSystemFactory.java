@@ -56,13 +56,14 @@ public class HdfsFileSystemFactory implements FileSystemFactory, InitializingBea
         synchronized (user) {
             // ---------- set hadoop file system ----------
             Configuration configuration = new Configuration();
+            configuration.setBoolean("fs.hdfs.impl.disable.cache", true);
             FileSystem fileSystem = null;
-            for(String confFileStr:this.confFileStrList){
+            /*for(String confFileStr:this.confFileStrList){
                 System.out.println(confFileStr);
                 configuration.addResource(confFileStr);
-            }
+            }*/
             try {
-                fileSystem = FileSystem.get(configuration);
+                fileSystem = FileSystem.newInstance(configuration);
             } catch(IOException e) {
                 e.printStackTrace();
             } catch(Exception e) {
