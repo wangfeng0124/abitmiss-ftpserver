@@ -71,6 +71,7 @@ hadoop文件系统  --> abitmiss-ftpserver/conf/cus-hdfs-ftpd.xml
 
 ## 联系方式
 如果你有一些问题或者提高建议给我，你可以通过email(wangfeng0124@gmail.com)的方式联系我
+<!--
 ## 捐献
 如果abitmiss-ftpserver帮助了你，你可以通过如下的方式支持我。
 #### 阿里支付
@@ -80,3 +81,4 @@ hadoop文件系统  --> abitmiss-ftpserver/conf/cus-hdfs-ftpd.xml
 #### visa信用卡支付
 中国招商银行
 4514 6176 4383 8511
+-->
